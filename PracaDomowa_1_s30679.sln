@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracaDomowa_1_s30679", "PracaDomowa_1_s30679\PracaDomowa_1_s30679.csproj", "{821375CF-98AF-4EB5-9D6D-CEA2C436CBC4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{821375CF-98AF-4EB5-9D6D-CEA2C436CBC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{821375CF-98AF-4EB5-9D6D-CEA2C436CBC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{821375CF-98AF-4EB5-9D6D-CEA2C436CBC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{821375CF-98AF-4EB5-9D6D-CEA2C436CBC4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
