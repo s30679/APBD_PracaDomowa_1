@@ -5,13 +5,17 @@ public class Kontener_na_plyny : Kontener, IHazardNotifier
     private bool CzyNiebezpiecznyLadunek { get; set; }
     public Kontener_na_plyny(double masaLadunkuKg, double wysokoscKonteneraCm, double wagaWlasnaKonteneraKg, double glebokoscKonteneraCm, double maxLadownoscKonteneraKg, bool czyNiebezpiecznyLadunek) : base(masaLadunkuKg, wysokoscKonteneraCm, wagaWlasnaKonteneraKg, glebokoscKonteneraCm, maxLadownoscKonteneraKg)
     {
-        czyNiebezpiecznyLadunek = czyNiebezpiecznyLadunek;
+        CzyNiebezpiecznyLadunek = czyNiebezpiecznyLadunek;
         int pom_numer_ser = 0;
         for (int i = 0; i < numery_seryjne.Capacity; i++)
         {
-            pom_numer_ser++;
+            if (numery_seryjne.Contains("KON-L-"+pom_numer_ser))
+            {
+                pom_numer_ser++;
+            }
         }
         SetNumerSeryjny = "KON-L-" + pom_numer_ser;
+        numery_seryjne.Add(GetNumerSeryjny);
     }
     public void ZgloszenieNiebezpieczenstwa()
     {
