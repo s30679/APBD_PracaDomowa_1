@@ -53,7 +53,7 @@ public class Kontener
         glebokosc_kontenera_cm = glebokoscKonteneraCm;
         max_ladownosc_kontenera_kg=maxLadownoscKonteneraKg;
     }
-    public void oproznianie_ladunku()
+    public virtual void oproznianie_ladunku()
     {
         masa_ladunku_kg = 0;
         Console.WriteLine("Ładunek został opróżniony");

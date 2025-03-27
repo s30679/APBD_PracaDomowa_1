@@ -1,6 +1,6 @@
 ﻿namespace PracaDomowa_1_s30679;
 
-public class Kontener_na_gaz : Kontener
+public class Kontener_na_gaz : Kontener, IHazardNotifier
 {
     private double CisnienieWAtmosferach { get; set; }
 
@@ -17,5 +17,27 @@ public class Kontener_na_gaz : Kontener
         }
         SetNumerSeryjny = "KON-G-" + pom_numer_ser;
         numery_seryjne.Add(GetNumerSeryjny);
+    }
+    public void ZgloszenieNiebezpieczenstwa()
+    {
+        Console.WriteLine($"Niebezpieczna sytuacja kontener: "+GetNumerSeryjny);
+    }
+
+    public override void oproznianie_ladunku()
+    {
+        Set_masa_ladunku_kg = Get_masa_ladunku_kg * 0.05;
+    }
+
+    public override void zaladowanie(double dokladany_ladunek_kg)
+    {
+        if (Get_max_ladownosc_kontenera_kg <= (Get_masa_ladunku_kg + dokladany_ladunek_kg))
+        {
+            Set_masa_ladunku_kg = Get_masa_ladunku_kg+dokladany_ladunek_kg;
+        }
+        else
+        {
+            ZgloszenieNiebezpieczenstwa();
+            throw new OverfillException("Nie możesz dodać takiego ładunku, ponieważ przekroczysz ładowność kontenera");
+        }
     }
 }
