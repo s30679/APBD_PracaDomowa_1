@@ -3,7 +3,7 @@
 public class Kontener_na_plyny : Kontener, IHazardNotifier
 {
     private bool CzyNiebezpiecznyLadunek { get; set; }
-    public Kontener_na_plyny(double masaLadunkuKg, double wysokoscKonteneraCm, double wagaWlasnaKonteneraKg, double glebokoscKonteneraCm, double maxLadownoscKonteneraKg, bool czyNiebezpiecznyLadunek) : base(masaLadunkuKg, wysokoscKonteneraCm, wagaWlasnaKonteneraKg, glebokoscKonteneraCm, maxLadownoscKonteneraKg)
+    public Kontener_na_plyny(String nazwaLadunku,double masaLadunkuKg, double wysokoscKonteneraCm, double wagaWlasnaKonteneraKg, double glebokoscKonteneraCm, double maxLadownoscKonteneraKg, bool czyNiebezpiecznyLadunek) : base(nazwaLadunku,masaLadunkuKg, wysokoscKonteneraCm, wagaWlasnaKonteneraKg, glebokoscKonteneraCm, maxLadownoscKonteneraKg)
     {
         CzyNiebezpiecznyLadunek = czyNiebezpiecznyLadunek;
         int pom_numer_ser = 0;

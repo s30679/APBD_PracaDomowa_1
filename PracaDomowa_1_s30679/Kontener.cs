@@ -9,6 +9,7 @@ public class OverfillException : Exception
 
 public class Kontener
 {
+    public String nazwa_ladunku { get; set; }
     public static HashSet<string> numery_seryjne = new HashSet<string>();
     private double masa_ladunku_kg;
     public double Get_masa_ladunku_kg
@@ -45,7 +46,7 @@ public class Kontener
     {
         set { max_ladownosc_kontenera_kg = value; }
     }
-    public Kontener(double masaLadunkuKg, double wysokoscKonteneraCm, double wagaWlasnaKonteneraKg, double glebokoscKonteneraCm,double maxLadownoscKonteneraKg)
+    public Kontener(String nazwaLadunku, double masaLadunkuKg, double wysokoscKonteneraCm, double wagaWlasnaKonteneraKg, double glebokoscKonteneraCm,double maxLadownoscKonteneraKg)
     {
         masa_ladunku_kg = masaLadunkuKg;
         wysokosc_kontenera_cm = wysokoscKonteneraCm;

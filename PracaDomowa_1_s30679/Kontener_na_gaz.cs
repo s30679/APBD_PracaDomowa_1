@@ -4,7 +4,7 @@ public class Kontener_na_gaz : Kontener, IHazardNotifier
 {
     private double CisnienieWAtmosferach { get; set; }
 
-    public Kontener_na_gaz(double masaLadunkuKg, double wysokoscKonteneraCm, double wagaWlasnaKonteneraKg, double glebokoscKonteneraCm, double maxLadownoscKonteneraKg, double cisnienieWAtmosferach) : base(masaLadunkuKg, wysokoscKonteneraCm, wagaWlasnaKonteneraKg, glebokoscKonteneraCm, maxLadownoscKonteneraKg)
+    public Kontener_na_gaz(String nazwaLadunku, double masaLadunkuKg, double wysokoscKonteneraCm, double wagaWlasnaKonteneraKg, double glebokoscKonteneraCm, double maxLadownoscKonteneraKg, double cisnienieWAtmosferach) : base(nazwaLadunku,masaLadunkuKg, wysokoscKonteneraCm, wagaWlasnaKonteneraKg, glebokoscKonteneraCm, maxLadownoscKonteneraKg)
     {
         CisnienieWAtmosferach = cisnienieWAtmosferach;
         int pom_numer_ser = 0;
